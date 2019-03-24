@@ -71,6 +71,6 @@ if __name__ == '__main__':
 
     if currentIp != lastIp:
         setRecordSet(r53Client, args.fqdn, currentIp, dateTime, zoneId, recChangeParams)
-        print ("Ip's are different. Updating from %s to %s @ %s" % (lastIp, currentIp, dateTime))
+        print ("Updating %s : Ip's are different. Updating from %s to %s @ %s" % (args.fqdn, lastIp, currentIp, dateTime))
     else:
-        print ("Same IP %s @ %s" % (currentIp, dateTime))
+        print ("Updating %s : Same IP %s @ %s" % (args.fqdn, currentIp, dateTime))

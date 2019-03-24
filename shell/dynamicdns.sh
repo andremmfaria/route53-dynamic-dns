@@ -88,11 +88,11 @@ EOF
     # Update the Hosted Zone record
     aws route53 change-resource-record-sets --hosted-zone-id $ZONEID --change-batch file://$TMPFILE
 
-    echo "IP has changed from $RECORDIP to $ACTUALIP @ $(date)" >> $LOGFILE
+    echo "Updating $FQDN : IP has changed from $RECORDIP to $ACTUALIP @ $(date)" >> $LOGFILE
 
     # Clean up
     rm $TMPFILE
 else
-    echo "Same IP $ACTUALIP @ $(date)" >> $LOGFILE
+    echo "Updating $FQDN : Same IP $ACTUALIP @ $(date)" >> $LOGFILE
     exit 0
 fi
