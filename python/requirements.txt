@@ -1,6 +1,4 @@
-sys
 datetime
-subprocess
 argparse
 ipaddress
 boto3
