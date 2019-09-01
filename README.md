@@ -15,8 +15,7 @@ sh dynamicdns.sh --zone <zone-name> --fqdn <FQDN> --pbip <public-ip>
 ```
 
 ## Recommendations 
-I recommend using OpenDNS to discover your external ip
-Command: 
+I recommend using OpenDNS to discover your external ip using this command: 
 ```shell
 sh dig +short myip.opendns.com @resolver1.opendns.com
 ```
